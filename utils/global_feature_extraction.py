@@ -39,7 +39,6 @@ class Global_feature_extraction:
         # return the histogram
         return hist.flatten()
 
-    def edge_detecetion(self,image):
-        canny = cv2.Canny(image, 200,300)
-        cv2.imwrite("canny.jpg", canny)
-        return canny
+    def edge_detecetion(self,img):
+        img = cv2.imread(img, 0)
+        cv2.imwrite("canny.jpg", cv2.Canny(img, 200,300))
