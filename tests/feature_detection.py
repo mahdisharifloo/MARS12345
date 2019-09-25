@@ -1,7 +1,7 @@
 import cv2
 import numpy as np
 
-img = cv2.imread("0052.png", cv2.IMREAD_GRAYSCALE)
+img = cv2.imread("/home/mahdi/2.jpeg", cv2.IMREAD_GRAYSCALE)
 
 sift = cv2.xfeatures2d.SIFT_create()
 surf = cv2.xfeatures2d.SURF_create()
