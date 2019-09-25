@@ -11,15 +11,7 @@ import cv2
 
 class Global_feature_extraction:
 
-    #--------------------
-    # tunable-parameters
-    #--------------------
-    images_per_class = 10
-    fixed_size       = tuple((500, 500))
-    train_path       = "dataset/train"
-    h5_data          = 'output/data.h5'
-    h5_labels        = 'output/labels.h5'
-    bins             = 8
+    bins = 8
 
     # feature-descriptor-1: Hu Moments
     def shape(self,image):
@@ -47,3 +39,7 @@ class Global_feature_extraction:
         # return the histogram
         return hist.flatten()
 
+    def edge_detecetion(self,image):
+        canny = cv2.Canny(image, 200,300)
+        cv2.imwrite("canny.jpg", canny)
+        return canny
