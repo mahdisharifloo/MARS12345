@@ -22,12 +22,12 @@ import global_feature_extraction as fe
 #_____________________________________________
 #set global values
 #---------------------------------------------
-train_path = 'dataset/train'
-test_path  = 'dataset/test'
+train_path = 'media/dataset/train'
+test_path  = 'media/dataset/test'
 fixed_size = tuple((500, 500))
 images_per_class = 440
-h5_data          = 'output/data.h5'
-h5_labels        = 'output/labels.h5'
+h5_data          = '../outputs/data.h5'
+h5_labels        = '../outputs/labels.h5'
 # empty lists to hold feature vectors and labels
 global_features = []
 labels          = []
@@ -115,5 +115,5 @@ h5f_label.create_dataset('dataset_1', data=np.array(target))
 h5f_data.close()
 h5f_label.close()
 
-print("[STATUS] end of training..")
+print("[STATUS] end of feature extrating .")
 #-------------------------------------------------

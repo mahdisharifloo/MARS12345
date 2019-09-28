@@ -42,3 +42,11 @@ class Global_feature_extraction:
     def edge_detecetion(self,img):
         img = cv2.imread(img, 0)
         cv2.imwrite("canny.jpg", cv2.Canny(img, 200,300))
+        
+    def some_feature(self):
+        """ mahdi : I have some features code in my laptop that can help us .
+        so what if i add them in this place as method.
+        """
+        pass
+    
+        
